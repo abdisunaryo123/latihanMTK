@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Latihan PAS Matematika Kelas 5 – SDN Mulyo Haji</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff6df;--card:#fff;--tx:#1f2a44;--mut:#5b6785;--pri:#2563eb;--prit:#fff;--ok:#166534;--okb:#dcfce7;--no:#991b1b;--nob:#fee2e2;--bd:#d6dcee;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121828;--card:#1c2440;--tx:#eef1fb;--mut:#a9b3d3;--pri:#7aa2ff;--prit:#0b1226;--ok:#86efac;--okb:#12351f;--no:#fecaca;--nob:#3a1a1a;--bd:#34406a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121828;--card:#1c2440;--tx:#eef1fb;--mut:#a9b3d3;--pri:#7aa2ff;--prit:#0b1226;--ok:#86efac;--okb:#12351f;--no:#fecaca;--nob:#3a1a1a;--bd:#34406a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:18px/1.55 "Trebuchet MS",Verdana,sans-serif}
+.w{max-width:720px;margin:0 auto;padding:14px}
+.card{background:var(--card);border:2px solid var(--bd);border-radius:18px;padding:18px;margin-bottom:14px}
+h1{font-size:26px;margin:0 0 6px}h2{font-size:20px;margin:0 0 8px}
+.mut{color:var(--mut);font-size:15px}
+.bar{height:12px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--pri);transition:width .3s}
+.tag{display:inline-block;background:var(--pri);color:var(--prit);border-radius:99px;padding:2px 12px;font-size:14px;font-weight:bold}
+.q{white-space:pre-line;margin:10px 0}
+.opt{display:flex;gap:10px;align-items:center;border:2px solid var(--bd);border-radius:14px;padding:11px 14px;margin:8px 0;cursor:pointer;min-height:48px}
+.opt:has(input:checked){border-color:var(--pri);background:color-mix(in srgb,var(--pri) 14%,transparent)}
+.opt input{width:22px;height:22px;flex:none}
+.opt.ok{border-color:var(--ok);background:var(--okb)}.opt.no{border-color:var(--no);background:var(--nob)}
+button{font:inherit;font-weight:bold;border:0;border-radius:14px;padding:13px 22px;background:var(--pri);color:var(--prit);cursor:pointer;min-height:48px}
+button:disabled{opacity:.45;cursor:default}button.g{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+input[type=text],select{font:inherit;padding:10px;border-radius:12px;border:2px solid var(--bd);background:var(--card);color:var(--tx);width:100%;box-sizing:border-box}
+select{width:auto;min-width:90px}
+table{border-collapse:collapse;margin:8px 0}td,th{border:2px solid var(--bd);padding:6px 12px;text-align:center}th{background:color-mix(in srgb,var(--pri) 16%,transparent)}
+.fb{border-radius:14px;padding:12px 14px;margin-top:12px}.fb.ok{background:var(--okb);color:var(--ok)}.fb.no{background:var(--nob);color:var(--no)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:8px 0}
+.sc{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.bx{display:inline-block;border-radius:4px;margin:2px}.grp{display:inline-block;text-align:center;margin:4px 10px 4px 0;font-size:13px}
+.mn{display:inline-block;border-radius:6px;padding:12px 8px;margin:3px;color:#fff;font-weight:bold;font-size:14px;min-width:78px;text-align:center}
+pre{font:16px/1.3 monospace;background:color-mix(in srgb,var(--pri) 8%,transparent);padding:10px;border-radius:12px;overflow-x:auto}
+.nl{display:flex;justify-content:space-between;border-top:4px solid var(--pri);margin:26px 8px 6px;padding-top:6px;font-size:16px}
+.big{font-size:56px;font-weight:bold;color:var(--pri);margin:4px 0}
+</style></head><body><div class="w" id="app"></div>
+<script>
+var BL=[['#2563eb','10.000',34],['#16a34a','1.000',24],['#f97316','100',18],['#eab308','10',12],['#9ca3af','1',8]];
+function blk(c){return c.map(function(n,i){if(!n)return'';var s='';for(var k=0;k<n;k++)s+='<span class="bx" style="background:'+BL[i][0]+';width:'+BL[i][2]+'px;height:'+BL[i][2]+'px"></span>';return'<span class="grp">'+s+'<br>= '+BL[i][1]+'</span>'}).join('')}
+function tb(h,r){return'<table><tr>'+h.map(function(x){return'<th>'+x+'</th>'}).join('')+'</tr>'+r.map(function(a){return'<tr>'+a.map(function(x){return'<td>'+x+'</td>'}).join('')+'</tr>'}).join('')+'</table>'}
+var UANG='<span class="mn" style="background:#15803d">Rp20.000</span><span class="mn" style="background:#15803d">Rp20.000</span><br><span class="mn" style="background:#7e22ce">Rp10.000</span><span class="mn" style="background:#7e22ce">Rp10.000</span><span class="mn" style="background:#7e22ce">Rp10.000</span>';
+var PF='<pre>      12              18\n     /  \\            /  \\\n    3    4          2    9\n        / \\             / \\\n       2   2           3   3</pre>';
+var GB='<div class="nl"><span>0</span><span>1/4</span><span>2/4</span><span>3/4</span><span>1</span></div>';
+var LG='Blok biru = 10.000, hijau = 1.000, oranye = 100, kuning = 10, kubus kecil = 1.';
+var Q=[
+{t:'pg',q:'Koperasi Karang Tani mencatat hasil penjualan pupuk Rp52.000.\nBilangan 52.000 tersusun dari ….',o:['5 puluh ribuan dan 2 ribuan','5 ribuan dan 2 puluh ribuan','5 ratusan dan 2 ribuan','5 ribuan dan 2 ratusan'],a:0,e:'52.000 = 50.000 + 2.000, yaitu 5 puluh ribuan dan 2 ribuan.'},
+{t:'pg',q:'Kelompok Tani Karang Tani memanen jagung 68.500 kilogram.\nCara membaca bilangan 68.500 adalah ….',o:['enam puluh delapan ribu lima ratus','enam ribu delapan ratus lima puluh','enam puluh delapan lima ratus','enam delapan ribu lima ratus'],a:0,e:'68.500 dibaca enam puluh delapan ribu lima ratus.'},
+{t:'pg',q:'Pak Joko memanen singkong sebanyak dua puluh ribu tiga ratus lima kilogram.\nPenulisan angka yang tepat adalah ….',o:['20.350','20.305','2.035','200.305'],a:1,e:'20.000 + 300 + 5 = 20.305. Angka 0 ada di tempat puluhan.'},
+{t:'pg',q:'Perhatikan gambar blok. '+LG+'\nNilai tempat dari 6 blok hijau adalah ….',v:blk([4,6,2,5,3]),o:['satuan','puluhan','ratusan','ribuan'],a:3,e:'Blok hijau bernilai 1.000, jadi 6 blok hijau ada di tempat ribuan (6.000). Bilangannya 46.253.'},
+{t:'pg',q:'Kebun Karang Tani memiliki 73.480 batang pohon singkong.\nNilai angka 7 pada 73.480 adalah ….',o:['7.000','70.000','700','7'],a:1,e:'Angka 7 ada di puluh ribuan, nilainya 70.000.'},
+{t:'pg',q:'Hasil panen jagung Pak Dimas 35.600 kg dan Pak Amin 35.060 kg.\nPerbandingan yang benar adalah ….',o:['35.600 < 35.060','35.600 > 35.060','35.600 = 35.060','35.060 > 35.600'],a:1,e:'Bandingkan dari kiri. Ratusan: 6 lebih besar dari 0, jadi 35.600 > 35.060.'},
+{t:'pg',q:'Hasil panen singkong empat petani dicatat pada tabel.\nPetani yang panennya paling banyak adalah ….',v:tb(['Nama Petani','Hasil Panen (kg)'],[['Pak Dimas','48.250'],['Bu Sari','48.520'],['Pak Amin','48.205'],['Bu Wati','48.052']]),o:['Pak Dimas','Bu Sari','Pak Amin','Bu Wati'],a:1,e:'Semua 48.xxx. Ratusan terbesar adalah 5, yaitu 48.520 milik Bu Sari.'},
+{t:'pg',q:'Panen pisang: Pak Anto 26.400 kg, Pak Budi 24.600 kg, Pak Candra 26.040 kg.\nUrutan dari paling sedikit ke paling banyak adalah ….',o:['24.600; 26.040; 26.400','26.400; 26.040; 24.600','24.600; 26.400; 26.040','26.040; 24.600; 26.400'],a:0,e:'24.600 < 26.040 < 26.400.'},
+{t:'pg',q:'Tabungan: Rudi Rp15.800, Wati Rp18.500, Dimas Rp15.080, Sari Rp18.050.\nUrutan dari terbesar ke terkecil adalah ….',o:['18.500; 18.050; 15.800; 15.080','15.080; 15.800; 18.050; 18.500','18.050; 18.500; 15.080; 15.800','18.500; 18.050; 15.080; 15.800'],a:0,e:'18.500 > 18.050 > 15.800 > 15.080.'},
+{t:'pg',q:'Bu Guru menulis: 6 puluh ribuan, 4 ribuan, 0 ratusan, 3 puluhan, 8 satuan.\nBilangan yang tersusun adalah ….',o:['64.380','64.038','60.438','46.038'],a:1,e:'60.000 + 4.000 + 0 + 30 + 8 = 64.038.'},
+{t:'pg',q:'Bu Sari mencatat 83.265 batang bibit.\nBilangan 83.265 jika diuraikan menjadi ….',o:['80.000 + 3.000 + 200 + 60 + 5','8.000 + 3.000 + 200 + 60 + 5','80.000 + 3.000 + 600 + 20 + 5','80.000 + 300 + 200 + 60 + 5'],a:0,e:'83.265 = 80.000 + 3.000 + 200 + 60 + 5.'},
+{t:'pg',q:'Ibu Ani membawa uang seperti pada gambar.\nJumlah seluruh uang Ibu Ani adalah ….',v:UANG,o:['Rp50.000','Rp60.000','Rp70.000','Rp80.000'],a:2,e:'2 × 20.000 = 40.000 dan 3 × 10.000 = 30.000. Jumlahnya 70.000.'},
+{t:'pg',q:'Pak Tani menjual jagung. Hari Senin dapat Rp45.000 dan hari Selasa Rp38.000.\nJumlah uang yang diterima adalah ….',o:['Rp73.000','Rp83.000','Rp93.000','Rp7.000'],a:1,e:'45.000 + 38.000 = 83.000.'},
+{t:'pg',q:'Kelompok Tani Karang Tani punya 76.000 bibit pohon. Sebanyak 28.500 bibit dibagikan.\nSisa bibit adalah ….',o:['57.500 bibit','47.500 bibit','48.500 bibit','104.500 bibit'],a:1,e:'76.000 − 28.500 = 47.500.'},
+{t:'pg',q:'Bu Siti punya 12 buku dan 18 pensil. Semua dibagi ke paket sama banyak, paket sebanyak-banyaknya. Perhatikan pohon faktor.\nBanyak paket adalah ….',v:PF,o:['2 paket','3 paket','6 paket','36 paket'],a:2,e:'12 = 2 × 2 × 3 dan 18 = 2 × 3 × 3. FPB = 2 × 3 = 6.'},
+{t:'pgk',q:'Ibu membagi kue menjadi 4 bagian sama besar. Perhatikan garis bilangan.\nPilihlah dua jawaban yang benar.',v:GB,o:['1/2 > 1/4','3/4 < 1/2','3/4 > 1/2'],a:[0,2],e:'Makin ke kanan makin besar. 1/2 > 1/4 dan 3/4 > 1/2.'},
+{t:'pgk',q:'Bu Guru menulis 70.205. Bilangan itu dapat diuraikan menjadi ….\nPilihlah dua jawaban yang benar.',o:['70.000 + 200 + 5','70.000 + 2.000 + 5','60.000 + 10.000 + 200 + 5'],a:[0,2],e:'Pilihan A dan C bernilai 70.205. Pilihan B bernilai 72.005.'},
+{t:'pgk',q:'Pak Dimas punya 350 butir telur. Sebagian dijual, sisa 125 butir. Telur yang dijual dilambangkan "…".\nKalimat matematika yang sesuai adalah ….\nPilihlah dua jawaban yang benar.',o:['350 − … = 125','125 + … = 350','… − 350 = 125'],a:[0,1],e:'350 − … = 125 dan 125 + … = 350 saling berkaitan. Nilai … adalah 225.'},
+{t:'pgk',q:'Pak Joko ke pasar tiap 4 hari, Pak Amin tiap 6 hari. Hari ini mereka bertemu.\nPernyataan yang benar adalah ….\nPilihlah dua jawaban yang benar.',o:['FPB dari 4 dan 6 adalah 2.','KPK dari 4 dan 6 adalah 24.','Mereka bertemu lagi 12 hari kemudian.'],a:[0,2],e:'4 = 2 × 2 dan 6 = 2 × 3. FPB = 2, KPK = 12.'},
+{t:'pgk',q:'Bu Sari belanja dan membayar dengan 1 lembar uang Rp100.000.\nPilihlah dua jawaban yang benar.',v:tb(['Barang','Harga'],[['Beras','Rp30.000'],['Minyak goreng','Rp20.000'],['Telur','Rp25.000']]),o:['Jumlah belanja Bu Sari Rp75.000.','Uang kembalian Bu Sari Rp25.000.','Uang kembalian Bu Sari Rp35.000.'],a:[0,1],e:'30.000 + 20.000 + 25.000 = 75.000. Kembalian 100.000 − 75.000 = 25.000.'},
+{t:'mj',q:'Pasangkan setiap bilangan dengan cara membacanya!',l:['30.040','25.000','40.500'],o:['empat puluh ribu lima ratus','tiga puluh ribu empat puluh','dua puluh lima ribu'],a:[1,2,0],e:'30.040 = tiga puluh ribu empat puluh; 25.000 = dua puluh lima ribu; 40.500 = empat puluh ribu lima ratus.'},
+{t:'mj',q:'Pak Dimas menulis bilangan 74.201. Pasangkan setiap pertanyaan dengan nilainya!',l:['Nilai angka 4','Nilai angka 2','Nilai angka 7'],o:['200','70.000','4.000'],a:[2,0,1],e:'Angka 4 di ribuan = 4.000; angka 2 di ratusan = 200; angka 7 di puluh ribuan = 70.000.'},
+{t:'mj',q:'Pasangkan setiap kumpulan uang dengan jumlahnya!',l:['2 lembar Rp20.000','1 lembar Rp50.000 dan 2 lembar Rp10.000','5 lembar Rp10.000'],o:['Rp70.000','Rp40.000','Rp50.000'],a:[1,0,2],e:'40.000; 50.000 + 20.000 = 70.000; 5 × 10.000 = 50.000.'},
+{t:'mj',q:'Pasangkan setiap pasangan pecahan dengan tanda yang tepat!',l:['1/2 … 1/4','3/6 … 1/2','2/5 … 3/5'],o:['<','=','>'],a:[2,1,0],e:'1/2 > 1/4; 3/6 = 1/2; 2/5 < 3/5.'},
+{t:'mj',q:'Pasangkan setiap cerita dengan hasil yang tepat!',l:['Ibu punya 2 kg gula, lalu membeli 1/2 kg lagi.','Pak Hadi punya tali 4 1/2 meter, dipakai 1 meter. Sisa tali ….','Ibu punya tepung 3 1/4 kg, lalu menambah 2 kg.'],o:['5 1/4 kg','2 1/2 kg','3 1/2 meter'],a:[1,2,0],e:'2 + 1/2 = 2 1/2; 4 1/2 − 1 = 3 1/2; 3 1/4 + 2 = 5 1/4.'},
+{t:'bs',q:'Kebun Karang Tani punya 34.560 batang pohon singkong dan 30.000 batang pohon jagung.',s:[['34.560 = 30.000 + 4.000 + 500 + 60.',1],['Bilangan 34.560 terdiri dari 3 ribuan dan 4 puluh ribuan.',0],['Bilangan 30.000 terdiri dari 3 puluh ribuan.',1]],e:'34.560 = 3 puluh ribuan, 4 ribuan, 5 ratusan, 6 puluhan.'},
+{t:'bs',q:'Pak Dimas memanen singkong 45.300 kg. Bu Sari memanen 45.030 kg.',s:[['45.300 > 45.030.',1],['Hasil panen Bu Sari lebih banyak daripada Pak Dimas.',0],['45.030 < 45.300.',1]],e:'Ratusan: 3 lebih besar dari 0, jadi panen Pak Dimas lebih banyak.'},
+{t:'bs',q:'Tabungan kelas 5: Ani Rp25.000, Budi Rp20.500, Citra Rp22.000.',s:[['Urutan dari terkecil: Rp20.500; Rp22.000; Rp25.000.',1],['Tabungan terbanyak milik Budi.',0],['Urutan dari terbesar: Rp25.000; Rp20.500; Rp22.000.',0]],e:'Naik: 20.500; 22.000; 25.000. Turun: 25.000; 22.000; 20.500. Terbanyak milik Ani.'},
+{t:'bs',q:'Pak Joko memanen jagung 25.000 kg minggu lalu dan 14.000 kg minggu ini.',s:[['Jumlah panen dua minggu adalah 39.000 kg.',1],['Panen minggu lalu lebih banyak 11.000 kg daripada minggu ini.',1],['Panen minggu ini lebih banyak daripada minggu lalu.',0]],e:'25.000 + 14.000 = 39.000 dan 25.000 − 14.000 = 11.000.'},
+{t:'bs',q:'Bu Wati punya tabungan Rp56.000. Minggu pertama menabung Rp18.000. Minggu kedua mengambil Rp24.000.',s:[['Setelah menabung, tabungan menjadi Rp74.000.',1],['Setelah mengambil uang, tabungan menjadi Rp52.000.',0],['Tabungan akhir lebih sedikit daripada tabungan awal.',1]],e:'56.000 + 18.000 = 74.000. Lalu 74.000 − 24.000 = 50.000, lebih sedikit dari 56.000.'},
+{t:'bs',q:'Ibu membuat kue. Senin memakai 1/2 kg tepung, Selasa 3/4 kg, Rabu 1/4 kg.',s:[['Tepung paling banyak dipakai pada hari Selasa.',1],['1/4 kg lebih banyak daripada 1/2 kg.',0],['Urutan pemakaian dari paling sedikit: Rabu, Senin, Selasa.',1]],e:'1/4 < 1/2 < 3/4.'},
+{t:'bs',q:'Ibu Nur punya 3 kg gula. Ibu membeli lagi 1 1/2 kg. Lalu Ibu memakai 2 kg untuk membuat kue.',s:[['Setelah membeli, gula Ibu Nur menjadi 4 1/2 kg.',1],['Setelah dipakai, sisa gula Ibu Nur 2 kg.',0],['Sisa gula Ibu Nur sekarang 2 1/2 kg.',1]],e:'3 + 1 1/2 = 4 1/2. Lalu 4 1/2 − 2 = 2 1/2.'},
+{t:'bs',q:'Pak Joko punya 500 pohon pisang. Ia menanam lagi … pohon sehingga menjadi 750 pohon. Lalu 300 pohon ditebang.',s:[['500 + … = 750, maka … adalah 250.',1],['Setelah penebangan, pohon pisang tinggal 550 pohon.',0],['750 − 300 = 450.',1]],e:'750 − 500 = 250. Sisa pohon 750 − 300 = 450.'},
+{t:'bs',q:'Bu Sari ke pasar tiap 3 hari, Bu Wati tiap 4 hari. Hari Senin mereka bertemu.',s:[['KPK dari 3 dan 4 adalah 12.',1],['Mereka bertemu lagi 7 hari kemudian.',0],['Mereka bertemu lagi pada hari Sabtu.',1]],e:'KPK 3 dan 4 = 12. Senin + 12 hari (1 pekan + 5 hari) = Sabtu.'},
+{t:'bs',q:'Ayah membeli 2 karung pupuk. Satu karung Rp40.000. Ayah membayar dengan Rp100.000.',s:[['Harga 2 karung pupuk adalah Rp80.000.',1],['Uang kembalian Ayah adalah Rp30.000.',0],['Uang Rp100.000 cukup untuk membeli 2 karung pupuk.',1]],e:'2 × 40.000 = 80.000. Kembalian 100.000 − 80.000 = 20.000.'},
+{t:'is',q:'Kelompok Tani Karang Tani punya 48.000 bibit pohon. Sebanyak 25.000 bibit sudah ditanam.\nSisa bibit adalah … bibit.',a:['23000'],d:'23.000',e:'48.000 − 25.000 = 23.000.'},
+{t:'is',q:'Perhatikan gambar blok. '+LG+'\nBilangan yang ditunjukkan gambar adalah ….',v:blk([5,2,4,1,0]),a:['52410'],d:'52.410',e:'50.000 + 2.000 + 400 + 10 = 52.410.'},
+{t:'is',q:'Pak Joko punya 450 bibit cabai. Sebanyak 150 ditanam di kebun A, lalu … bibit ditanam di kebun B. Sisa 100 bibit.\nKalimat matematikanya 450 − 150 − … = 100. Nilai … adalah ….',a:['200'],d:'200',e:'450 − 150 = 300. Lalu 300 − … = 100, jadi … = 200.'},
+{t:'is',q:'Bu Lastri punya 24 jagung dan 36 singkong. Semua dimasukkan ke keranjang dengan isi sama banyak, keranjang sebanyak-banyaknya. Pakai pohon faktor!\nBanyak keranjang adalah ….',a:['12'],d:'12',e:'24 = 2×2×2×3 dan 36 = 2×2×3×3. FPB = 2 × 2 × 3 = 12.'},
+{t:'is',q:'Pak Amin memanen 3 1/2 kg cabai. Ia menjual 2 kg.\nSisa cabai adalah … kg.',a:['11/2','1½','1,5','1.5'],d:'1 1/2',e:'3 1/2 − 2 = 1 1/2.'}
+];
+var NM={pg:'Pilihan Ganda – pilih 1 jawaban',pgk:'Pilihan Ganda Kompleks – pilih 2 jawaban',mj:'Menjodohkan',bs:'Benar atau Salah',is:'Isian Singkat'};
+var MX={pg:2,pgk:2,mj:3,bs:2,is:5},L='ABCD',app=document.getElementById('app'),name='',i=0,sc=[],checked=false;
+function h(s){app.innerHTML='<div class="w" style="padding:0">'+s+'</div>';window.scrollTo(0,0)}
+function start(){h('<div class="card"><h1>🧮 Latihan PAS Matematika</h1><div class="mut">Kelas 5 · SDN Mulyo Haji · 40 soal</div><p>Halo! Kerjakan soal satu per satu. Setelah menjawab, tekan <b>Periksa Jawaban</b> untuk melihat benar atau salah beserta penjelasannya.</p><p>Namamu:</p><input type="text" id="nm" placeholder="Tulis namamu di sini"><div class="row"><span></span><button onclick="go()">Mulai ▶</button></div></div>')}
+function go(){var e=document.getElementById('nm');if(e)name=e.value.trim()||'Murid';i=0;sc=[];show()}
+function show(){checked=false;var q=Q[i],s='<div class="card"><div class="bar"><i style="width:'+(i/Q.length*100)+'%"></i></div><div class="row"><span class="mut">Soal '+(i+1)+' dari '+Q.length+'</span><span class="tag">'+NM[q.t]+'</span></div><div class="q">'+q.q+'</div>'+(q.v||'');
+if(q.t=='pg'||q.t=='pgk')s+=q.o.map(function(o,k){return'<label class="opt" id="o'+k+'"><input type="'+(q.t=='pg'?'radio':'checkbox')+'" name="a" value="'+k+'"'+(q.t=='pgk'?' onchange="lim(this)"':'')+'>'+L[k]+'. '+o+'</label>'}).join('');
+if(q.t=='mj'){s+='<div class="mut">Kolom B:</div>'+q.o.map(function(o,k){return'<div>'+L[k]+'. '+o+'</div>'}).join('')+'<br>'+q.l.map(function(l,k){return'<div class="row"><span>'+(k+1)+'. '+l+'</span><select id="s'+k+'"><option value="">Pilih</option>'+q.o.map(function(o,j){return'<option value="'+j+'">'+L[j]+'</option>'}).join('')+'</select></div>'}).join('')}
+if(q.t=='bs')s+=q.s.map(function(x,k){return'<div class="card" style="padding:10px;margin:8px 0" id="b'+k+'"><div>'+'abc'[k]+'. '+x[0]+'</div><label><input type="radio" name="b'+k+'" value="1"> Benar</label> &nbsp; <label><input type="radio" name="b'+k+'" value="0"> Salah</label></div>'}).join('');
+if(q.t=='is')s+='<input type="text" id="is" placeholder="Tulis jawabanmu" autocomplete="off">';
+s+='<div id="fb"></div><div class="row"><span></span><button id="bt" onclick="chk()">Periksa Jawaban</button></div></div>';h(s)}
+function lim(e){var c=document.querySelectorAll('input[name=a]:checked');if(c.length>2)e.checked=false}
+function val(n){var e=document.querySelector('input[name='+n+']:checked');return e?+e.value:-1}
+function chk(){if(checked){i++;if(i>=Q.length)return fin();return show()}
+var q=Q[i],p=0,ok=false,ans='';
+if(q.t=='pg'){var v=val('a');if(v<0)return alert('Pilih salah satu jawaban dulu ya!');ok=v==q.a;p=ok?2:0;ans=L[q.a]+'. '+q.o[q.a];document.getElementById('o'+q.a).classList.add('ok');if(!ok)document.getElementById('o'+v).classList.add('no')}
+if(q.t=='pgk'){var c=[].map.call(document.querySelectorAll('input[name=a]:checked'),function(x){return+x.value});if(c.length<2)return alert('Pilih dua jawaban ya!');ok=c.every(function(x){return q.a.indexOf(x)>=0});p=ok?2:0;ans=q.a.map(function(x){return L[x]}).join(' dan ');q.o.forEach(function(o,k){var d=document.getElementById('o'+k);if(q.a.indexOf(k)>=0)d.classList.add('ok');else if(c.indexOf(k)>=0)d.classList.add('no')})}
+if(q.t=='mj'){var r=q.l.map(function(l,k){return document.getElementById('s'+k).value});if(r.indexOf('')>=0)return alert('Pilih pasangan untuk semua nomor ya!');r.forEach(function(x,k){if(+x==q.a[k])p++;document.getElementById('s'+k).style.borderColor=+x==q.a[k]?'var(--ok)':'var(--no)'});ok=p==3;ans=q.a.map(function(x,k){return(k+1)+'-'+L[x]}).join(', ')}
+if(q.t=='bs'){var vs=q.s.map(function(x,k){return val('b'+k)});if(vs.indexOf(-1)>=0)return alert('Jawab semua pernyataan ya!');ok=true;vs.forEach(function(x,k){var g=x==q.s[k][1];if(!g)ok=false;document.getElementById('b'+k).style.borderColor=g?'var(--ok)':'var(--no)'});p=ok?2:0;ans=q.s.map(function(x,k){return'abc'[k]+'-'+(x[1]?'Benar':'Salah')}).join(', ')}
+if(q.t=='is'){var t=document.getElementById('is').value.toLowerCase().replace(/kg|bibit|keranjang/g,'').replace(/\s+/g,'').replace(/\.(?=\d{3})/g,'');if(!t)return alert('Tulis jawabanmu dulu ya!');ok=q.a.indexOf(t)>=0;p=ok?5:0;ans=q.d;document.getElementById('is').disabled=true}
+document.querySelectorAll('input,select').forEach(function(x){x.disabled=true});
+sc[i]=p;checked=true;var f=document.getElementById('fb');
+f.innerHTML='<div class="fb '+(ok?'ok':'no')+'"><b>'+(ok?'🎉 Benar! Hebat, '+name+'!':(q.t=='mj'&&p?'👍 Sebagian benar ('+p+' dari 3).':'💪 Belum tepat, ayo belajar lagi.'))+'</b>'+(ok?'':'<br>Jawaban benar: '+ans)+'<br>'+q.e+'</div>';
+var b=document.getElementById('bt');b.disabled=false;b.textContent=i==Q.length-1?'Lihat Nilai ▶':'Soal Berikutnya ▶'}
+function fin(){var t=sc.reduce(function(a,b){return a+b},0),by={};Q.forEach(function(q,k){by[q.t]=by[q.t]||[0,0];by[q.t][0]+=sc[k];by[q.t][1]+=MX[q.t]});
+var s=t>=80?'Luar biasa! ⭐':t>=60?'Bagus, terus berlatih! 👍':'Ayo belajar lagi, kamu pasti bisa! 💪';
+var w=Q.map(function(q,k){return sc[k]<MX[q.t]?k+1:0}).filter(Boolean);
+h('<div class="card" style="text-align:center"><h1>Selesai, '+name+'!</h1><div class="big">'+t+'</div><div class="mut">dari 100 poin</div><p><b>'+s+'</b></p></div><div class="card"><h2>Rincian</h2>'+Object.keys(by).map(function(k){return'<div class="row"><span>'+NM[k].split(' – ')[0]+'</span><b>'+by[k][0]+' / '+by[k][1]+'</b></div>'}).join('')+'<p class="mut">Soal yang perlu dipelajari lagi: '+(w.length?w.join(', '):'tidak ada, semuanya benar!')+'</p><div class="row"><span></span><button onclick="go()">🔄 Ulangi</button></div></div>')}
+start();
+</script></body></html>
